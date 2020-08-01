@@ -1,0 +1,5 @@
+%h2 スレッドを立てる
+= form_with(model: @board, local: true) do |f|
+  = f.label :title, 'スレッド名'
+  = f.text_field :title, placeholder: '20字まで'
+  = f.submit 'スレッドを立てる'
