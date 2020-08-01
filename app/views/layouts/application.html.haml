@@ -2,13 +2,13 @@
 %html
   %head
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
-    %title DeviseRails6
+    %title TakeChannnel
     = csrf_meta_tags
     = csp_meta_tag
     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
   %body
-    / ここに追加
+    = render 'layouts/header'
     %p.notice= notice
     %p.alert= alert
     = yield

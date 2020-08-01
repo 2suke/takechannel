@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
   root 'board#index'
-  get 'board/show'
   devise_for :users
+  resources :board, only: %i[index show create]
 end

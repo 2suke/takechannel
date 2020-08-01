@@ -1,0 +1,7 @@
+%h2 掲示板一覧
+- @boards.each do |board|
+  %div.card
+    %div.card-body
+      = link_to(board.title, board)
+      %small.text-muted
+        = board.user_id
