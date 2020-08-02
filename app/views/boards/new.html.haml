@@ -2,4 +2,6 @@
 = form_with(model: @board, local: true) do |f|
   = f.label :title, 'スレッド名'
   = f.text_field :title, placeholder: '20字まで'
+  = f.label :tag_list, 'タグ'
+  = f.text_field :tag_list, value: @board.tag_list.join(','), placeholder: ',区切りで文字列を入力するとタグを付けられます（例：タグ１,タグ２）'
   = f.submit 'スレッドを立てる'
