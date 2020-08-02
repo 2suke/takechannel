@@ -1,6 +1,6 @@
 class CommentsController < ApplicationController
   def create
-    current_board = Board.find_by(params.require(:comment)[:id])
+    current_board = Board.find_by(id: params.require(:comment)[:board_id])
     @comment = current_board.comments.build(comment_params)
     @comment.user = current_user
     @comment.save

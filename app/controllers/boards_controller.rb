@@ -4,7 +4,7 @@ class BoardsController < ApplicationController
   end
 
   def show
-    @board = Board.find_by(params[:id])
+    @board = Board.find_by(id: params[:id])
     @comment = Comment.new
   end
 
@@ -14,11 +14,7 @@ class BoardsController < ApplicationController
 
   def create
     @board = current_user.boards.build(board_params)
-    if @board.save
-      redirect_to @board
-    else
-      redirect_to @board
-    end
+    redirect_to @board
   end
 
   private
