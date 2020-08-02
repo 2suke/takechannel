@@ -1,0 +1,6 @@
+- @board.comments.each do |comment|
+  %ul
+    %li #{ comment.user.name }
+    %li #{ comment.created_at }
+    %li #{ comment.message }
+  
