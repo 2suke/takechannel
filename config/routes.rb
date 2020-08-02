@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
+  root 'boards#index'
   devise_for :users
-  root 'threads#index'
-  get  'threads/show'
+  resources :boards, only: %i[index show new create]
 end
