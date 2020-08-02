@@ -4,8 +4,7 @@ class BoardsController < ApplicationController
   end
 
   def show
-    @board = Board.find_by(params[:id])
-    @comments
+    @board = Board.find_by(id: params[:id])
     @comment = Comment.new
   end
 
